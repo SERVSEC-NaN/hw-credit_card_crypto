@@ -1,5 +1,6 @@
 require_relative './luhn_validator.rb'
 require 'json'
+require 'openssl'
 
 class CreditCard
   # TODO: mixin the LuhnValidator using an 'include' statement
@@ -16,7 +17,7 @@ class CreditCard
   end
 
   # returns json string
-  def to_json(_)
+  def to_json
     # TODO: setup the hash with all instance vairables to serialize into json
     hash.to_json
   end
