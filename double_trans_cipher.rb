@@ -31,8 +31,7 @@ module DoubleTranspositionCipher
 
   def self.create_matrix(document)
     size = (document.to_s.length ** 0.5).ceil
-
-    grid = Array.new(size) { Array.new(size) {" "}}
+    grid = Array.new(size) { Array.new(size) {" "} }
 
     document.to_s.chars.each_with_index.map do |key, value|
       x, y = value.divmod(11)
